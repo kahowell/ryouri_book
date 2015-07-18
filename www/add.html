@@ -1,0 +1,67 @@
+<h2>Add Recipe</h2>
+<input type="text" class="form-control" placeholder="Recipe Name" ng-model="recipe.name">
+<h3>Ingredients</h3>
+<div class="row">
+    <div class="col-xs-4">
+        <label>Ingredient</label>
+    </div>
+    <div class="col-xs-4">
+        <label>Amount</label>
+    </div>
+    <div class="col-xs-4">
+        <label>Unit</label>
+    </div>
+</div>
+<div class="form-group row" ng-repeat="ingredient in recipe.ingredients track by $index">
+    <div class="col-xs-4">
+        <input type="text" class="form-control" placeholder="Ingredient" ng-model="ingredient.name">
+    </div>
+    <div class="col-xs-4">
+        <input type="number" class="form-control" placeholder="Amount" ng-model="ingredient.amount">
+    </div>
+    <div class="col-xs-4">
+        <input type="text" class="form-control" placeholder="Unit" ng-model="ingredient.unit">
+    </div>
+</div>
+<div class="row form-group">
+    <div class="col-xs-12">
+        <div class="pull-right">
+            <button class="btn btn-danger" ng-click="remove_ingredient()">
+                <span class="glyphicon glyphicon-minus"></span> Less Ingredients
+            </button>
+            <button class="btn btn-info" ng-click="add_ingredient()">
+                <span class="glyphicon glyphicon-plus"></span> More Ingredients
+            </button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Instructions</h3>
+        <div class="form-group" ng-repeat="instruction in recipe.instructions track by $index">
+            <label>Step <span ng-bind="$index + 1"></span>:</label>
+            <textarea class="form-control" ng-model="instruction.text" placeholder="Instructions go here..."></textarea>
+        </div>
+    </div>
+</div>
+<div class="row form-group">
+    <div class="col-xs-12">
+        <div class="pull-right">
+            <button class="btn btn-danger" ng-click="remove_instruction()">
+                <span class="glyphicon glyphicon-minus"></span> Less Instructions
+            </button>
+            <button class="btn btn-info" ng-click="add_instruction()">
+                <span class="glyphicon glyphicon-plus"></span> More Instructions
+            </button>
+        </div>
+    </div>
+</div>
+<div class="row form-group">
+    <div class="col-xs-12">
+        <div class="pull-right">
+            <button class="btn btn-success" ng-click="add_recipe()">
+                <span class="glyphicon glyphicon-plus"></span> Finish and Add Recipe
+            </button>
+        </div>
+    </div>
+</div>

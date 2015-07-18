@@ -1,0 +1,19 @@
+<h2>Search</h2>
+<div class="row">
+    <div class="col-xs-12 form-group">
+        <div class="input-group">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-search"></span>
+            </span>
+            <input type="text" class="form-control" placeholder="Enter a query..." ng-model="query" ng-change="search()">
+        </div>
+    </div>
+</div>
+<h3>Results</h3>
+<div ng-if="recipes.length == 0 && !loading">
+    No matching recipes found...
+</div>
+<div class="progress" ng-if="loading">
+    <div class="progress-bar progress-bar-info progress-bar-striped active" style="width: 100%">Loading</div>
+</div>
+<div class="row" ng-include="'recipe_list.html'"></div>

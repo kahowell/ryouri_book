@@ -1,0 +1,5 @@
+<ul ng-cloak>
+    <li ng-repeat="recipe in recipes">
+        <a ng-href="#/book/{{recipe.name | encodeURIComponent}}" ng-bind="recipe.name"></a>
+    </li>
+</ul>

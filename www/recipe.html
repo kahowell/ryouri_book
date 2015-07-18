@@ -1,0 +1,30 @@
+<h2 ng-bind="recipe.name"></h2>
+<h3>Ingredients</h3>
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Ingredient</th>
+                    <th>Amount</th>
+                    <th>Unit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="ingredient in recipe.ingredients">
+                    <td ng-bind="ingredient.name"></td>
+                    <td ng-bind="ingredient.amount"></td>
+                    <td ng-bind="ingredient.unit"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Instructions</h3>
+        <ol>
+            <li ng-repeat="instruction in recipe.instructions"><span ng-bind="instruction.text"></span></li>
+        </ol>
+    </div>
+</div>
