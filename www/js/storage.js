@@ -31,15 +31,12 @@ angular.module('ryouri_book')
             return add_recipe_deferred.promise;
         }
         this.load_recipes = function() {
-                console.log('loading recipes 1st');
             var load_recipes_deferred = $q.defer();
             var recipes = [];
             recipe_store_promise.then(function(db) {
-                console.log('loading recipes');
                 var recipe_store = db.transaction(['recipes'], 'readonly').objectStore('recipes');
                 var req = recipe_store.openCursor();
                 req.onsuccess = function(event) {
-                    console.log('herey!', event);
                     var cursor = event.target.result;
                     if (cursor) {
                         recipes.push(cursor.value);
@@ -51,7 +48,7 @@ angular.module('ryouri_book')
                     }
                 }
                 req.onerror = function(event) {
-                    console.log('error', event);
+                    // TODO handle
                 }
             });
             return load_recipes_deferred.promise;

@@ -3,7 +3,6 @@ angular.module('ryouri_book')
         $scope.recipes = [];
         $scope.loading = true;
         recipe_service.load_recipes().then(function(recipes) {
-            console.log('loaded recipes');
             $scope.recipes = recipes;
             $scope.loading = false;
         });

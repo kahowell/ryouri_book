@@ -6,7 +6,6 @@ angular.module('ryouri_book')
             recipe_service.search($scope.query).then(function(recipes) {
                 $scope.recipes = recipes;
                 $scope.loading = false;
-                console.log(recipes);
             });
         }
     }]);
