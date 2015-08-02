@@ -3,23 +3,7 @@ angular.module('ryouri_book')
         var initialized_db_deferred = $q.defer();
         var recipe_store_promise = initialized_db_deferred.promise;
         var db = new PouchDB('recipes');
-        /*
-        var keyword_index = {
-            _id: '_design/keyword_idx',
-            views: {
-                'keyword_idx': {
-                    map: function (recipe) {
-                        recipe.keywords.each(function(keyword)) {
-                            emit(keyword);
-                        }.toString();
-                    }
-                }
-            }
-        };
-        */
-        //pouch.put(keyword_index).then(function() {
-            initialized_db_deferred.resolve(db);
-        //});
+        initialized_db_deferred.resolve(db);
         this.add_recipe = function(recipe) {
             recipe._id = recipe.name;
             recipe.keywords = [recipe.name];
