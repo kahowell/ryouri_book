@@ -23,8 +23,9 @@ angular.module('ryouri_book')
             $scope.recipe.instructions.pop();
         }
         $scope.add_recipe = function() {
-            recipe_service.add_recipe($scope.recipe);
-            $location.url('/book/' + encodeURIComponent($scope.recipe.name));
+            recipe_service.add_recipe($scope.recipe).then(function() {
+                $location.url('/book/' + encodeURIComponent($scope.recipe.name));
+            });
         }
         $scope.recipe = $scope.new_recipe();
     }]);
