@@ -13,5 +13,4 @@
     <icon density="mdpi" src="res/android/mdpi.png" />
     <icon density="ldpi" src="res/android/ldpi.png" />
     <engine name="android" spec="4.0.2" />
-    <cdv:platform name="android" />
 </widget>
