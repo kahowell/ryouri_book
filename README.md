@@ -1,5 +1,6 @@
 Ryouri Book
 ===========
+[![Build Status](https://travis-ci.org/kahowell/ryouri_book.svg?branch=master)](https://travis-ci.org/kahowell/ryouri_book)
 Ryouri Book is an open source mobile recipe app.
 
 It is developed with Cordova, AngularJS, and PouchDB.
