@@ -1,3 +1,5 @@
 language: android
 install: npm install
-script: node_modules/cordova/bin/cordova build
+script:
+  - node_modules/cordova/bin/cordova platform add android
+  - node_modules/cordova/bin/cordova build
