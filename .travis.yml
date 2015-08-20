@@ -1,4 +1,7 @@
 language: android
+android:
+  components:
+    - build-tools-22.0.1
 install: npm install
 script:
   - node_modules/cordova/bin/cordova platform add android
