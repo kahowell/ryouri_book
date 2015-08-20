@@ -1,0 +1,3 @@
+language: android
+install: npm install
+script: cordova build
