@@ -1,6 +1,8 @@
 {
   "name": "ryouri_book",
+  "version": "0.1.0",
   "dependencies": {
-    "bower": "1.4.1"
+    "bower": "1.4.1",
+    "cordova": "5.1.1"
   }
 }
